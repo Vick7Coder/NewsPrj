@@ -1,16 +1,17 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: phamh
-  Date: 12/28/2022
-  Time: 2:18 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>About</title>
-</head>
-<body>
+<%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
-</body>
-</html>
+<t:main>
+    <jsp:body>
+        <div class="card">
+            <h5 class="card-header">About</h5>
+            <div class="card-body">
+                Sinh viên tự thực hiện!
+            </div>
+            <div class="card-footer text-muted">
+                2 months ago!
+            </div>
+        </div>
+    </jsp:body>
+</t:main>
+

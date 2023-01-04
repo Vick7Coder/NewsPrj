@@ -27,4 +27,19 @@ public class UserService {
             return list.get(0);
         }
     }
+
+    public static User findByUsername(String uName) {
+        final String query = "select * from users where uName = :uName";
+        try (Connection con = DbUtils.getConnection()) {
+            List<User> list = con.createQuery(query)
+                    .addParameter("uName", uName)
+                    .executeAndFetch(User.class);
+
+            if (list.size() == 0) {
+                return null;
+            }
+
+            return list.get(0);
+        }
+    }
 }
